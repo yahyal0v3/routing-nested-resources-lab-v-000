@@ -8,7 +8,7 @@ class SongsController < ApplicationController
       end
     else
       @songs = Song.all
-      @song.artist_name == ""
+      @song = Song.find_by(artist_name: "")
     end
   end
 
