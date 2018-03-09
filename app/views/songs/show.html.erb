@@ -1,4 +1,4 @@
-<h1><%= link_to @song.title, artist_song_path(@song.artist, @song) %></h1>
+<h1><%= link_to @song.title, artist_song_path(@song.artist, @song) unless @song.artist.nil? %></h1>
 <h3> by <%= display_artist(@song) %></h3>
 
 <%= link_to "All Songs", songs_path %>
