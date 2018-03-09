@@ -1562,3 +1562,20 @@ ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: songs.art
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.5ms)
+
+
+Started GET "/songs" for 68.195.7.92 at 2018-03-09 19:30:51 +0000
+Cannot render console from 68.195.7.92! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  Rendered songs/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"songs", :id=>nil} missing required keys: [:id]):
+    1: <% if flash[:alert] %>
+    2:   <%= link_to flash[:alert], edit_song_path(@song) %>
+    3: <% end %>
+    4: 
+    5: <ul>
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__4093810993479508764_69826941627840'
+
+
