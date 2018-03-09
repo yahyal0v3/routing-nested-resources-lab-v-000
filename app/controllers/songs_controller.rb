@@ -3,12 +3,12 @@ class SongsController < ApplicationController
     if params[:artist_id]
       if Artist.exists?(params[:artist_id])
         @songs = Artist.find(params[:artist_id]).songs
+        @song = Song.find_by(artist_id: params[:artist_id])
       else
         redirect_to artists_path, alert: "Artist not found."
       end
     else
       @songs = Song.all
-      @song = Song.find_by(artist_name: "")
     end
   end
 
