@@ -1,4 +1,6 @@
-
+<% if flash[:alert] %>
+  <%= link_to flash[:alert], edit_song_path(@song) %>
+<% end %>
 
 <ul>
 <% @songs.each do |song| %>
