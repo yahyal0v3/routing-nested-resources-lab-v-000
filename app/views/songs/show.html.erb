@@ -1,8 +1,3 @@
-<% if flash[:notice] %>
-  <%= link_to flash[:notice], edit_song_path(@song) %>
-<% end %>
-
-
 <h1><%= link_to @song.title, artist_song_path(@song.artist, @song) %></h1>
 <h3> by <%= display_artist(@song) %></h3>
 
