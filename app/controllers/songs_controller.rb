@@ -14,7 +14,7 @@ class SongsController < ApplicationController
   def show
     if Song.exists?(params[:id])
       @song = Song.find(params[:id])
-      inspect params.anspect
+      inspect params.inspect
       if @song.artist_name == ""
         @songs = Song.all
         render :index#, alert: "Add Artist."
