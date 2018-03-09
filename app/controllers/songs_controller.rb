@@ -16,7 +16,7 @@ class SongsController < ApplicationController
       @song = Song.find(params[:id])
       if @song.artist_name == ""
         @songs = Song.all
-        render :index, alert: "Add Artist."
+        render :index#, alert: "Add Artist."
       end
     else
       redirect_to artist_songs_path(params[:artist_id]), alert: "Song not found."
