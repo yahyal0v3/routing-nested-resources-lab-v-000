@@ -15,7 +15,7 @@ class SongsController < ApplicationController
     if Song.exists?(params[:id])
       if Song.artist
         @song = Song.find(params[:id])
-      else 
+      else
         redirect_to edit_song_path, alert: "Add artist."
       end
     else
